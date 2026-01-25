@@ -28,7 +28,7 @@
       ]
     },
     {
-      "source": "/api/diagnosis/(.*)",
+      "source": "/api/diagnosis/",
       "headers": [
         {
           "key": "Access-Control-Allow-Credentials",
@@ -47,12 +47,6 @@
           "value": "X-Requested-With, Content-Type, Authorization"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/diagnosis",
-      "destination": "/api/diagnosis"
     }
   ]
 }

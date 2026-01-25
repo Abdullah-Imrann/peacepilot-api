@@ -7,7 +7,9 @@ const nextConfig: NextConfig = {
   // Only use static export when building for Firebase
   // Vercel needs full Next.js with API routes, so no static export
   output: process.env.BUILD_FOR_FIREBASE === "true" ? "export" : undefined,
-  trailingSlash: true,
+  // trailingSlash causes 308 redirects on API routes, which breaks CORS
+  // Only use it for Firebase static export
+  trailingSlash: process.env.BUILD_FOR_FIREBASE === "true",
   images: {
     unoptimized: true,
   },
