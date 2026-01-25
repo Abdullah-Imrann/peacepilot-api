@@ -237,8 +237,10 @@ export async function generateJournalSummary(
   if (typeof window !== "undefined") {
     try {
       // Use the same diagnosis endpoint that already works
-      const apiUrl = process.env.NEXT_PUBLIC_VERCEL_API_URL 
-        ? `${process.env.NEXT_PUBLIC_VERCEL_API_URL}/api/diagnosis`
+      // Ensure no trailing slash on base URL to avoid redirects
+      const baseUrl = process.env.NEXT_PUBLIC_VERCEL_API_URL?.replace(/\/$/, '');
+      const apiUrl = baseUrl 
+        ? `${baseUrl}/api/diagnosis`
         : "/api/diagnosis";
       
       const requestBody = {
@@ -256,8 +258,12 @@ export async function generateJournalSummary(
       
       const res = await fetch(apiUrl, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          "Origin": window.location.origin,
+        },
         body: JSON.stringify(requestBody),
+        redirect: "follow", // Follow redirects
       });
 
       console.log("🔵 CLIENT: Response status:", res.status);
