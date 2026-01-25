@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "../styles/theme.css";
+@import "../styles/animations.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--cp-bg);
+  color: var(--cp-foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.25);
+  color: var(--cp-foreground);
+}

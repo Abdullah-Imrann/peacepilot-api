@@ -1,0 +1,35 @@
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --cp-bg: #f7f7fb;
+  --cp-surface: #ffffff;
+  --cp-muted: #eef0fb;
+  --cp-foreground: #0f172a;
+  --cp-secondary: #475569;
+  --cp-border: #e5e7eb;
+  --cp-accent: #7c3aed;
+  --cp-accent-foreground: #f8fafc;
+  --cp-success: #10b981;
+  --cp-warning: #f59e0b;
+  --cp-danger: #ef4444;
+  color-scheme: light;
+}
+
+.dark {
+  --cp-bg: #0b1220;
+  --cp-surface: #0f172a;
+  --cp-muted: #111827;
+  --cp-foreground: #e5e7eb;
+  --cp-secondary: #94a3b8;
+  --cp-border: #1f2937;
+  --cp-accent: #a855f7;
+  --cp-accent-foreground: #0b1220;
+  --cp-success: #22c55e;
+  --cp-warning: #facc15;
+  --cp-danger: #f87171;
+  color-scheme: dark;
+}
+

@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "yesss": "joko-cards",
+    "default": "joko-cards",
+    "zoo": "peacepilot-ai"
+  },
+  "targets": {},
+  "etags": {}
+}
