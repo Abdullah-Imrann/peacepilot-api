@@ -125,9 +125,9 @@ const DashboardPage = () => {
             <h3 className={`${item.title ? "mt-1" : "mt-2"} text-lg font-semibold text-[var(--cp-foreground)]`}>
               Summary
             </h3>
-            <p className="mt-1 max-h-24 overflow-hidden text-ellipsis text-sm text-[var(--cp-secondary)]">
-              {item.summary}
-            </p>
+            <div className="mt-1 max-h-32 overflow-y-auto text-sm text-[var(--cp-secondary)]">
+              <p className="whitespace-pre-wrap">{item.summary}</p>
+            </div>
             {item.feelings.length > 0 && (
               <div className="mt-3 flex flex-wrap gap-2">
                 {item.feelings.slice(0, 3).map((feeling) => (

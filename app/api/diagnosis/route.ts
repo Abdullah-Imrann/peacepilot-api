@@ -94,10 +94,10 @@ Journal Title: ${journalTitle}
 Journal Content: ${journalContent}
 
 Provide a concise JSON response with the following keys:
-- summary: a brief, empathetic summary (2-3 sentences) of what they wrote and what they might be feeling
+- summary: a brief, empathetic summary (2-3 sentences) of what they wrote and what they might be feeling. If the user mentions problematic behaviors (like excessive phone scrolling, procrastination, unhealthy habits, or negative patterns), gently acknowledge this in the summary and suggest they reflect on it. For example: "You noticed you spent too much time on your phone today - this might be worth reflecting on and considering what you could do differently tomorrow."
 - feelings: array of 2-4 feelings the person might be experiencing based on their journal entry
 
-Keep the tone warm, understanding, and supportive.
+Keep the tone warm, understanding, and supportive. When pointing out areas for reflection, be gentle and non-judgmental.
 `.trim(),
           },
         ],
